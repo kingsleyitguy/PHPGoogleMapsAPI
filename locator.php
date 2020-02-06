@@ -41,7 +41,7 @@ function getLongLatt($address) {
 
 	$actual = $address;
 	$address = urlencode(trim(preg_replace("/\s*\n*\([^)]*\)+/", " ", $address)));
-	$url = 'https://maps.google.com/maps/api/geocode/json?address=' . ($address) . '&key=AIzaSyCS8d7L0NOeEukjLxiYWRFKwb-OjjVV7XA';
+	$url = 'https://maps.google.com/maps/api/geocode/json?address=' . ($address) . '&key=API_KEY_HERE';
 	$a=file_get_contents($url);
 	$data=json_decode($a,true);
 	if($data['status']=="OK")
